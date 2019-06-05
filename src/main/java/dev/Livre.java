@@ -1,10 +1,20 @@
 package dev;
 
-public final class Livre extends Document {
-	private int nbPage;
+public final class Livre extends DocumentEcris {
+	private boolean empruntable;
 
-	public Livre() {
-		// TODO Auto-generated constructor stub
+	public Livre(String titre, String auteur, int nbPages, boolean empruntable) {
+		super(titre, auteur, nbPages);
+		this.empruntable = empruntable;
 	}
 
+	@Override
+	public boolean isEmpruntable() {
+		return this.empruntable;
+	}
+
+	@Override
+	public String getTypeDocument() {
+		return "Livre";
+	}
 }

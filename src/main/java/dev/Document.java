@@ -6,7 +6,15 @@ public abstract class Document {
 	protected String auteur;
 
 	public Document() {
-		// TODO Auto-generated constructor stub
 	}
+
+	public Document(String titre, String auteur) {
+		this.titre = titre;
+		this.auteur = auteur;
+	}
+
+	public abstract float coutDocument();
+	public abstract boolean isEmpruntable();
+	public abstract String getTypeDocument();
 
 }
